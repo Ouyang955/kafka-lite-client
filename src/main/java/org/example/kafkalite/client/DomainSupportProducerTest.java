@@ -57,7 +57,7 @@ public class DomainSupportProducerTest {
      */
     private static void testDomainSupport(String[] args) {
         // 可以改为您的实际域名
-        String kafkaDomain = "kafka.kafka_dr_1_noacl_test.test.mq.shopee.io:19092";
+        String kafkaDomain = "kafka.example.com:9092";
 
         // 如果命令行传入了域名参数，使用命令行参数
         if (args.length > 0) {
@@ -218,7 +218,7 @@ public class DomainSupportProducerTest {
                                 String messageValue = String.format("%d:%s", localIndex, messageTemplate);
 
                                 ProducerRecord record = new ProducerRecord(
-                                            "cluster-test-topic-11",
+                                            "test-topic",
                                         "key" + localIndex,
                                         messageValue
                                 );

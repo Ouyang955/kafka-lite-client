@@ -44,15 +44,9 @@ public class ConsumerBrokerSwitchTest {
         // 选项3：纯远程配置（基于日志中看到的实际leader地址）
         
         List<String> brokers = Arrays.asList(
-            // 本地broker1
-//            "localhost:9093",
-            // 本地broker2
-//            "localhost:9094"
-
-            // 线上broker
-            "10.251.176.5:19092",
-            "10.251.135.195:19092",
-            "10.251.184.8:19092"
+            "localhost:9092",
+            "localhost:9093",
+            "localhost:9094"
         );
         System.out.println("配置的Broker列表: " + brokers);
         System.out.println("使用本地Kafka集群进行broker切换测试");

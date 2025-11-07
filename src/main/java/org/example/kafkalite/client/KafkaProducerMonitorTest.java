@@ -55,7 +55,7 @@ public class KafkaProducerMonitorTest {
     
     public static void main(String[] args) {
         // 1. 配置 broker 地址
-        String broker = "10.251.176.5:19092"; // 默认使用您指定的broker
+        String broker = "localhost:9092"; // 默认使用本地broker
         
         if (args.length > 0) {
             broker = args[0];
@@ -228,7 +228,7 @@ public class KafkaProducerMonitorTest {
                                 String key = keyTemplates[localIndex % keyTemplates.length];
                                 
                                 ProducerRecord record = new ProducerRecord(
-                                    "performance-test-topic-5", // 使用您指定的topic
+                                    "performance-test-topic-3", // 使用您指定的topic
                                     key,
                                     messageValue
                                 );

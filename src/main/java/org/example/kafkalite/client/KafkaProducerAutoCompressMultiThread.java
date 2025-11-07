@@ -33,10 +33,8 @@ public class KafkaProducerAutoCompressMultiThread {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        String topic = "cluster-test-topic";
-//        String topic = "java-test-topic";
-//        String bootstrapServers = "10.251.183.199:27462";
-        String bootstrapServers = "10.251.176.5:19092";
+        String topic = "test-topic";
+        String bootstrapServers = "localhost:9092";
         int threadCount = 1;
         long testDurationMs = 1000 * 600; // 2分钟
         int messageSizeBytes = 1024;

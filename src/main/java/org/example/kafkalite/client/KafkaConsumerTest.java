@@ -31,14 +31,12 @@ public class KafkaConsumerTest {
         }));
 
         // 1. 配置 broker 地址
-        // 消费者组测试
-         String broker = "10.251.176.5:19092";
-
-        // broker测试
-//        String broker = "10.251.176.5:19092";
-        // 本地测试
-
-//        String broker = "localhost:9092";
+        String broker = "localhost:9092";
+        
+        // 可以通过命令行参数指定其他broker
+        if (args.length > 0) {
+            broker = args[0];
+        }
 
         // 2. 创建消费者配置
         ConsumerConfig config = new ConsumerConfig();

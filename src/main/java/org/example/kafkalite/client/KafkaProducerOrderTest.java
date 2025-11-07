@@ -46,7 +46,7 @@ public class KafkaProducerOrderTest {
 
     public static void main(String[] args) {
         // 1. 配置 broker 地址
-        String broker = "10.251.183.199:27462"; // 默认使用您指定的broker
+        String broker = "localhost:9092"; // 默认使用本地broker
 
         if (args.length > 0) {
             broker = args[0];

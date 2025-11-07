@@ -45,8 +45,8 @@ public class DomainSupportConsumerTest {
      * 测试域名支持功能
      */
     private static void testDomainSupport() {
-        String kafkaDomain = "kafka.kafka_dr_1_noacl_test.test.mq.shopee.io:19092";  // 可以改为您的实际域名
-        String groupId = "domain-support-test-group-2"; // 使用动态group ID避免历史offset影响
+        String kafkaDomain = "kafka.example.com:9092";  // 可以改为您的实际域名
+        String groupId = "domain-support-test-group"; // 使用动态group ID避免历史offset影响
         ConsumerConfig config = createTestConfig();
         
         try {
@@ -56,7 +56,7 @@ public class DomainSupportConsumerTest {
             consumer = new KafkaLiteConsumerImpl(groupId, kafkaDomain, config);
             
             // 订阅主题
-            consumer.subscribe(Arrays.asList("cluster-test-topic-11"));
+            consumer.subscribe(Arrays.asList("test-topic"));
             
             System.out.println("\n=== 开始持续消费（演示自动DR切换） ===");
             System.out.println("新功能: 双重DNS检查机制");

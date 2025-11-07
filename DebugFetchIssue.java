@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class DebugFetchIssue {
     public static void main(String[] args) {
-        String broker = "10.251.183.199:27462";
+        String broker = "localhost:9092";
         
         ConsumerConfig config = new ConsumerConfig();
         config.setEnableAutoCommit(false);  // 禁用自动提交，手动控制

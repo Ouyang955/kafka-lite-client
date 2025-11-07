@@ -43,7 +43,7 @@ public class OfficialKafkaProducerMonitorTest {
     
     public static void main(String[] args) {
         // 1. 配置 broker 地址
-        String broker = "10.251.176.5:19092"; // 默认使用您指定的broker
+        String broker = "localhost:9092"; // 默认使用本地broker
         
         if (args.length > 0) {
             broker = args[0];
@@ -297,7 +297,7 @@ public class OfficialKafkaProducerMonitorTest {
  *         org.example.kafkalite.client.OfficialKafkaProducerMonitorTest
  * 
  * 3. 指定参数:
- *    java ... OfficialKafkaProducerMonitorTest "10.251.176.5:19092" 180000
+ *    java ... OfficialKafkaProducerMonitorTest "localhost:9092" 180000
  * 
  * 4. 对比观察:
  *    - 同时运行两个测试，观察QPS变化趋势
